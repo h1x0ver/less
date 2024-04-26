@@ -1,0 +1,136 @@
+Что такое Класс?
+
+Класс в программировании - это шаблон или чертёж для создания объектов. Класс описывает состояние и поведение объекта, а
+объект, созданный на основе класса, называется экземпляром класса.
+
+
+1. Свойства (поля):
+
+Описание: Свойства класса представляют данные, которые характеризуют объект.
+Пример:
+
+class Person {
+    name: string;
+    age: number;
+}
+
+В этом примере name и age - это свойства класса Person, представляющие имя и возраст человека.
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+2. Методы:
+
+Описание: Методы класса представляют действия, которые объект может выполнять.
+Пример:
+
+class Person {
+    sayHello(): void {
+      console.log("Hello!");
+    }
+}
+Здесь sayHello - это метод класса Person, который выводит "Hello!" в консоль.
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+3.Конструктор:
+
+
+Конструктор в объектно-ориентированном программировании (ООП) - это специальный метод класса, который вызывается автоматически при создании экземпляра (объекта) этого класса. Его основная задача - инициализировать свойства объекта, устанавливая им начальные значения.
+
+
+class Person {
+  // Свойства класса
+  name: string;
+  age: number;
+
+  // Конструктор
+  constructor(name: string, age: number) {
+    // Инициализация свойств значениями, переданными при создании экземпляра
+    this.name = name;
+    this.age = age;
+  }
+}
+
+
+
+В этом примере:
+
+name и age - это свойства класса Person, представляющие имя и возраст.
+constructor - это конструктор класса, который принимает два параметра (name и age) и использует их для установки начальных значений свойств.
+Когда вы создаёте экземпляр класса, конструктор автоматически вызывается:
+
+
+const person1 = new Person("John", 25);
+
+
+В этом случае, при создании объекта person1, конструктор Person получит значения "John" и 25 для name и age соответственно, и установит их как начальные значения свойств объекта.
+
+Итак, конструктор - это специальная функция, которая выполняется при создании объекта класса, и её основная цель - установить начальные значения свойств объекта, чтобы объект был готов к использованию в программе.
+
+
+
+
+
+
+
+
+
+
+
+
+Sınıf, programlamada nesnelerin oluşturulması için bir şablon veya taslak olarak tanımlanır. Bir sınıf, nesnenin durumunu ve davranışını açıklar ve sınıf temelinde oluşturulan nesne bir sınıf örneği olarak adlandırılır.
+
+Özellikler (alanlar):
+Tanım: Bir sınıfın özellikleri, nesneyi karakterize eden verileri temsil eder.
+Örnek:
+
+typescript
+Copy code
+class Person {
+    name: string;
+    age: number;
+}
+Bu örnekte name ve age, bir kişinin adını ve yaşını temsil eden Person sınıfının özellikleridir.
+
+Metodlar:
+Tanım: Bir sınıfın metodları, bir nesnenin gerçekleştirebileceği eylemleri temsil eder.
+Örnek:
+
+typescript
+Copy code
+class Person {
+    sayHello(): void {
+      console.log("Merhaba!");
+    }
+}
+Burada sayHello, "Merhaba!" yı konsola yazdıran Person sınıfının bir metodu olarak tanımlanmıştır.
+
+Kurucu (Constructor):
+Nesne tabanlı programlamada kurucu, bir sınıfın örneği (nesnesi) oluşturulurken otomatik olarak çağrılan özel bir metodtur. Temel amacı, nesnenin özelliklerini başlangıç değerleriyle başlatmaktır.
+
+typescript
+Copy code
+class Person {
+  // Sınıfın özellikleri
+  name: string;
+  age: number;
+
+  // Kurucu
+  constructor(name: string, age: number) {
+    // Özelliklerin başlangıç değerlerini oluşturur
+    this.name = name;
+    this.age = age;
+  }
+}
+Bu örnekte:
+
+name ve age, adı ve yaşını temsil eden Person sınıfının özellikleridir.
+constructor, iki parametre (name ve age) alan ve bunları özelliklerin başlangıç değerlerini atamak için kullanan bir sınıf kurucusudur.
+Bir sınıf örneği oluşturduğunuzda, kurucu otomatik olarak çağrılır:
+
+typescript
+Copy code
+const person1 = new Person("John", 25);
+Bu durumda, Person nesnesini oluşturduğunuzda, Person kurucusu name ve age için sırasıyla "John" ve 25 değerlerini alır ve bunları nesne özelliklerinin başlangıç değerleri olarak ayarlar.
+
+Kurucu, bir nesne sınıfının oluşturulması sırasında çalışan özel bir fonksiyondur ve amacı, nesnenin özelliklerinin başlangıç değerlerini ayarlamaktır, böylece nesne programda kullanıma hazır hale gelir.
